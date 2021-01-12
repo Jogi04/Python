@@ -1,4 +1,6 @@
-# prime number checker
+#!/bin/python
+
+
 from math import ceil
 
 
