@@ -2,7 +2,7 @@
 
 
 class NewtonVerfahren:
-    def __init__(self, start_x, iterations):
+    def __init__(self, start_x=10, iterations=50):
         self.start_x = start_x
         self.iterations = iterations
         self.main_loop()
@@ -13,6 +13,8 @@ class NewtonVerfahren:
                 new_x = self.return_zero(self.return_m(self.start_x), self.return_b(self.return_y(self.start_x), self.return_m(self.start_x), self.start_x))
             except ZeroDivisionError:
                 break
+            #if self.start_x == new_x:
+            #    break
             self.start_x = new_x
             print(self.start_x)
 
@@ -34,4 +36,4 @@ class NewtonVerfahren:
 
 
 if __name__ == '__main__':
-    test = NewtonVerfahren(10000, 50)
+    test = NewtonVerfahren(10, 50)
