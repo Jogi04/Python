@@ -6,6 +6,9 @@ import pyautogui
 
 
 class SpotifyRandomPlaylistOrder:
+    """
+    only works with 1920x1080 resolution screen
+    """
     def __init__(self, iterations):
         self.iterations = iterations
         time.sleep(3)           # sleep for 3 seconds to give user time to switch to spotify window
@@ -17,6 +20,7 @@ class SpotifyRandomPlaylistOrder:
             pyautogui.mouseDown(button='left')
             pyautogui.moveTo(1000, random.randrange(300, 900, 35), 1)
             pyautogui.mouseUp(button='left')
+            time.sleep(0.5)
             pyautogui.scroll(random.randint(-20, 20))
             if i % 10 == 0:
                 pyautogui.scroll(random.choice([50, -50]))
@@ -25,4 +29,4 @@ class SpotifyRandomPlaylistOrder:
 
 
 if __name__ == '__main__':
-    custom_order = SpotifyRandomPlaylistOrder(5)
+    custom_order = SpotifyRandomPlaylistOrder(20)
