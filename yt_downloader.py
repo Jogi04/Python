@@ -2,7 +2,7 @@ import pytube
 url = str(input('Enter video url: '))
 
 youtube = pytube.YouTube(url)
-streams = youtube.streams.all()
+streams = youtube.streams
 for stream in streams:
     print(stream)
 
