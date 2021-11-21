@@ -1,6 +1,3 @@
-import sys
-
-
 class MatrixAddition:
     def __init__(self, matrix1, matrix2):
         self.matrix1 = matrix1
@@ -10,12 +7,10 @@ class MatrixAddition:
 
     def check_same_type(self):
         if len(self.matrix1) != len(self.matrix2):
-            print('Not the same type!!!')
-            sys.exit()
+            raise TypeError("Matrices are not the same type")
         for i in range(len(self.matrix1)):
             if len(self.matrix1[i]) != len(self.matrix2[i]):
-                print('Not the same type!!!')
-                sys.exit()
+                raise TypeError("Matrices are not the same type")
 
     def add(self):
         for line in range(len(self.matrix1)):
