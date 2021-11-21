@@ -1,8 +1,21 @@
+import sys
+
+
 class MatrixAddition:
     def __init__(self, matrix1, matrix2):
         self.matrix1 = matrix1
         self.matrix2 = matrix2
         self.result = matrix1
+        self.check_same_type()
+
+    def check_same_type(self):
+        if len(self.matrix1) != len(self.matrix2):
+            print('Not the same type!!!')
+            sys.exit()
+        for i in range(len(self.matrix1)):
+            if len(self.matrix1[i]) != len(self.matrix2[i]):
+                print('Not the same type!!!')
+                sys.exit()
 
     def add(self):
         for line in range(len(self.matrix1)):
@@ -23,11 +36,11 @@ class MatrixAddition:
 
 if __name__ == '__main__':
     m1 = [[1, 1, 3],
-          [4, -2, 8]]
+          [2, 7, 1]]
 
     m2 = [[3, 9, 4],
           [4, 2, 3]]
 
-    addition = MatrixAddition(m1, m2)
-    addition.add()
-    print(addition)
+    res = MatrixAddition(m1, m2)
+    res.add()
+    print(res)
