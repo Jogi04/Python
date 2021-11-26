@@ -13,8 +13,8 @@ class NewtonVerfahren:
                 new_x = self.return_zero(self.return_m(self.start_x), self.return_b(self.return_y(self.start_x), self.return_m(self.start_x), self.start_x))
             except ZeroDivisionError:
                 break
-            #if self.start_x == new_x:
-            #    break
+            if self.start_x == new_x:
+                break
             self.start_x = new_x
             print(self.start_x)
 
