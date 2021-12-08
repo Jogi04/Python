@@ -16,4 +16,5 @@ class ArpScanner:
 
 
 if __name__ == '__main__':
-    scan = ArpScanner('192.168.0.0/24')
+    subnet = str(input('Enter subnet mask to scan: '))
+    scan = ArpScanner(subnet)
