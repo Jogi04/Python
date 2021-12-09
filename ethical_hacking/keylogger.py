@@ -3,6 +3,7 @@
 import os
 import datetime
 import time
+import cv2
 from pynput import keyboard
 import pyautogui
 
@@ -52,11 +53,15 @@ class ScreenshotTaker:
 
 class WebcamPictureTaker:
     def __init__(self):
-        pass
+        self.take_webcam_picture()
 
     def take_webcam_picture(self):
-        pass
+        cam_port = 0
+        cam = cv2.VideoCapture(cam_port)
+        result, image = cam.read()
+        if result:
+            cv2.imwrite("webcam.png", image)
 
 
 if __name__ == '__main__':
-    test = ScreenshotTaker()
+    test = WebcamPictureTaker()
