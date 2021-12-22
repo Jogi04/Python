@@ -1,13 +1,26 @@
 import pytube
-url = str(input('Enter video url: '))
 
-youtube = pytube.YouTube(url)
-streams = youtube.streams
-for stream in streams:
-    print(stream)
 
-which_stream = int(input('Enter itag for stream: '))
-video = youtube.streams.get_by_itag(which_stream)
-print('Downloading...')
-video.download('.')
-print('Done')
+class YtDownloader:
+    def __init__(self, url, destination_path=".", stream=140, print_streams=False):
+        self.url = url
+        self.destination_path = destination_path
+        self.stream = stream
+        self.print_streams = print_streams
+        self.download()
+
+    def download(self):
+        youtube = pytube.YouTube(self.url)
+        streams = youtube.streams
+        if self.print_streams:
+            for i in streams:
+                print(i)
+        video = youtube.streams.get_by_itag(self.stream)
+        print('Downloading...')
+        video.download(self.destination_path)
+        print('Done')
+
+
+if __name__ == '__main__':
+    test = YtDownloader('.',
+                        destination_path='')
