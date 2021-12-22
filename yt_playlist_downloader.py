@@ -25,5 +25,5 @@ class YtPlaylistDownloader:
 
 if __name__ == '__main__':
     test = YtPlaylistDownloader(
-        'https://www.youtube.com/watch?v=xeK1E1HaMdY&list=OLAK5uy_k4yeBNbCJLDBeqj_QsTlpRoncOxmGLQDo',
-        destination_path='/mnt/nas/johannes/Music/Various Artists')
+        '',
+        destination_path='')
