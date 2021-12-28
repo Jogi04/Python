@@ -101,3 +101,5 @@ for interface_name, interface_addresses in if_addrs.items():
 net_io = psutil.net_io_counters()
 print(f"Total Bytes Sent: {adjust_size(net_io.bytes_sent)}")
 print(f"Total Bytes Received: {adjust_size(net_io.bytes_recv)}")
+
+#test
