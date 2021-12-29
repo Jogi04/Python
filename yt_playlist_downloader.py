@@ -26,4 +26,4 @@ class YtPlaylistDownloader:
 if __name__ == '__main__':
     test = YtPlaylistDownloader(
         '',
-        destination_path='')
+        destination_path='.')
