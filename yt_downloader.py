@@ -22,5 +22,5 @@ class YtDownloader:
 
 
 if __name__ == '__main__':
-    test = YtDownloader('.',
+    test = YtDownloader('',
                         destination_path='')
