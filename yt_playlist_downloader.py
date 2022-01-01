@@ -20,10 +20,13 @@ class YtPlaylistDownloader:
                     print(j)
             video = youtube.streams.get_by_itag(self.stream)
             print('Downloading video...')
-            if count >= 10:
-                video.download(self.destination_path, filename=f'{count} - {video.title}')
-            else:
-                video.download(self.destination_path, filename=f'0{count} - {video.title}')
+            try:
+                if count >= 10:
+                    video.download(self.destination_path, filename=f'{count} - {video.title}')
+                else:
+                    video.download(self.destination_path, filename=f'0{count} - {video.title}')
+            except FileNotFoundError:
+                video.download(self.destination_path, filename=f'0{count} -  - Black Sabbath.mp3')
             print('Done')
             count += 1
 
