@@ -11,6 +11,7 @@ class YtPlaylistDownloader:
 
     def download(self):
         playlist = pytube.Playlist(self.url)
+        count = 1
         for i in playlist.video_urls:
             youtube = pytube.YouTube(i)
             streams = youtube.streams
@@ -19,8 +20,12 @@ class YtPlaylistDownloader:
                     print(j)
             video = youtube.streams.get_by_itag(self.stream)
             print('Downloading video...')
-            video.download(self.destination_path)
+            if count >= 10:
+                video.download(self.destination_path, filename=f'{count} - {video.title}')
+            else:
+                video.download(self.destination_path, filename=f'0{count} - {video.title}')
             print('Done')
+            count += 1
 
 
 if __name__ == '__main__':
