@@ -26,7 +26,7 @@ class YtPlaylistDownloader:
                 else:
                     video.download(self.destination_path, filename=f'0{count} - {video.title}')
             except FileNotFoundError:
-                video.download(self.destination_path, filename=f'0{count} -  - Black Sabbath.mp3')
+                video.download(self.destination_path, filename=f'0{count}')
             print('Done')
             count += 1
 
