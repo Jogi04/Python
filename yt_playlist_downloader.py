@@ -18,6 +18,7 @@ class YtPlaylistDownloader:
             if self.print_streams:
                 for j in streams:
                     print(j)
+                self.stream = int(input('Enter itag number: '))
             video = youtube.streams.get_by_itag(self.stream)
             print('Downloading video...')
             try:

@@ -15,6 +15,7 @@ class YtDownloader:
         if self.print_streams:
             for i in streams:
                 print(i)
+            self.stream = int(input('Enter itag number: '))
         video = youtube.streams.get_by_itag(self.stream)
         print('Downloading...')
         video.download(self.destination_path)
