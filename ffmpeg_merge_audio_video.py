@@ -6,4 +6,4 @@ def merge(video_file, audio_file, output_file):
 
 
 if __name__ == '__main__':
-    merge('video.mp4', 'audio.mp3', 'merged.mp4')
+    merge('video.mp4', 'audio.mp4', 'merged.mp4')
