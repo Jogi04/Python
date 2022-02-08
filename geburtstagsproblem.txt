@@ -1,0 +1,46 @@
+1
+Wahrscheinlichkeit: 1.0
+2
+Wahrscheinlichkeit: 0.9972602739726028
+3
+Wahrscheinlichkeit: 0.9917958341152185
+4
+Wahrscheinlichkeit: 0.9836440875334497
+5
+Wahrscheinlichkeit: 0.9728644263002063
+6
+Wahrscheinlichkeit: 0.9595375163508884
+7
+Wahrscheinlichkeit: 0.9437642969040244
+8
+Wahrscheinlichkeit: 0.9256647076483308
+9
+Wahrscheinlichkeit: 0.905376166110833
+10
+Wahrscheinlichkeit: 0.8830518222889221
+11
+Wahrscheinlichkeit: 0.8588586216782667
+12
+Wahrscheinlichkeit: 0.8329752111619353
+13
+Wahrscheinlichkeit: 0.8055897247675702
+14
+Wahrscheinlichkeit: 0.7768974879950266
+15
+Wahrscheinlichkeit: 0.7470986802363133
+16
+Wahrscheinlichkeit: 0.7163959947471498
+17
+Wahrscheinlichkeit: 0.6849923347034391
+18
+Wahrscheinlichkeit: 0.6530885821282105
+19
+Wahrscheinlichkeit: 0.6208814739684632
+20
+Wahrscheinlichkeit: 0.5885616164194198
+21
+Wahrscheinlichkeit: 0.5563116648347941
+22
+Wahrscheinlichkeit: 0.5243046923374498
+23
+Wahrscheinlichkeit: 0.49270276567601445
