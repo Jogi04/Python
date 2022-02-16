@@ -2,7 +2,7 @@ import random
 
 '''
     Problembeschreibung: 10 absolut treffsichere Jäger schießen gleichzeitig auf 10 Enten, wobei jeder Jäger sich sein
-    Ziel zufällig aussucht
+    Ziel zufällig aussucht. Wie viele Enten übelerben durchschnittlich?
 '''
 
 
