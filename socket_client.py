@@ -13,4 +13,3 @@ while True:
         client_socket.close()
         sys.exit()
     client_socket.send(out_msg.encode())
-
