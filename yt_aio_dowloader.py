@@ -3,8 +3,8 @@ import pytube
 
 
 class Yt_Aio_Downloader:
-    def __init__(self, print_streams=False):
-        self.print_streams = print_streams
+    def __init__(self):
+        self.print_streams = None
         self.is_playlist = None
         self.url = None
         self.destination_path = None
@@ -25,6 +25,12 @@ class Yt_Aio_Downloader:
 
     def get_destination_path(self):
         self.destination_path = str(input('Enter the destination path for the file(s): '))
+
+    def print_streams(self):
+        if str(input('Do you want to print the streams? [y/n]: ')) == 'y':
+            self.print_streams = True
+        else:
+            self.print_streams = False
 
     def download(self):
         """
