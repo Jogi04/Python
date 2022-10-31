@@ -10,8 +10,8 @@ class Yt_Aio_Downloader:
         self.destination_path = None
         self.get_is_playlist()
         self.get_url()
-        self.get_print_streams()
         self.get_destination_path()
+        self.get_print_streams()
         self.download()
         self.convert_mp4_to_mp3()
 
@@ -24,14 +24,14 @@ class Yt_Aio_Downloader:
     def get_url(self):
         self.url = str(input('Enter the youtube url: '))
 
+    def get_destination_path(self):
+        self.destination_path = str(input('Enter the destination path for the file(s): '))
+
     def get_print_streams(self):
         if str(input('Do you want to print the streams? [y/n]: ')) == 'y':
             self.print_streams = True
         else:
             self.print_streams = False
-
-    def get_destination_path(self):
-        self.destination_path = str(input('Enter the destination path for the file(s): '))
 
     def download(self):
         """
