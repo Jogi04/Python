@@ -8,12 +8,15 @@ class Yt_Aio_Downloader:
         self.is_playlist = None
         self.url = None
         self.destination_path = None
+        self.convert = None
         self.get_is_playlist()
         self.get_url()
         self.get_destination_path()
+        self.get_convert()
         self.get_print_streams()
         self.download()
-        self.convert_mp4_to_mp3()
+        if self.convert:
+            self.convert_mp4_to_mp3()
 
     def get_is_playlist(self):
         if str(input('Is it a playlist you want to download? [y/n]: ')) == 'y':
@@ -26,6 +29,12 @@ class Yt_Aio_Downloader:
 
     def get_destination_path(self):
         self.destination_path = str(input('Enter the destination path for the file(s): '))
+
+    def get_convert(self):
+        if str(input('Do you want to convert the file to mp3 after downloading? [y/n]: ')) == 'y':
+            self.convert = True
+        else:
+            self.convert = False
 
     def get_print_streams(self):
         if str(input('Do you want to print the streams? [y/n]: ')) == 'y':
